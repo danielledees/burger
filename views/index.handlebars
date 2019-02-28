@@ -1,37 +1,72 @@
-<h1>Eat Da Burger!</h1>
 
-
-<h2>Ready to Eat</h2>
-
-<ul>
- {{#each burgers}}
-      {{#unless devoured}}
-            {{> burgers/burger-block devoured=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers Devoured</h2>
-
-<ul>
-  {{#each burgers}}
-      {{#if devoured}}
-          {{> burgers/burger-block devoured=false}}
-      {{/if}}
-  {{/each}}
-</ul>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Eat Da Burger!</h1>
+    <img src="assets/img/burger-image.jpeg" alt="burger">
+  </div>
+</div>
 
 
 
 
-<h2 class="card-header text-center">Enter a burger you want to eat and click the submit button</h2>
-  
-  <form class="create-form">
-    <div class="form-group">
-        <label for="ham">Burger Name:</label>
-        <input type="text" id="ham" name="name">
+
+<div class ="container">
+  {{!-- <div class="row">
+    <div class="col-md-12 header">
+      <h1>Eat Da Burger!</h1>
+      <img src="assets/img/burger-image.jpeg" alt="burger">
     </div>
+  </div> --}}
+
+
+<br>
+
+<div class="row">
+  <div class="col-md-6 eat">
+      <h2>Ready to Eat</h2>
+
+      <ul>
+        
+      {{#each burgers}}
+       
+            {{#unless devoured}}
+                  {{> burgers/burger-block devoured=true}}
+              {{/unless}}
+          {{/each}}
+         
+      </ul>
+  </div>
+
+  <br>
+
+  <div class="col-md-6 devour">
+    <h2>Burgers Devoured</h2>
+      <ul>
+        {{#each burgers}}
+            {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+            {{/if}}
+        {{/each}}
+      </ul>
+
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-12 new">
+    <h2 class="card-header text-center">Enter a burger you want to eat and click the submit button</h2>
+      <form class="create-form">
+        <div class="form-group">
+            <label for="ham">Burger Name:</label>
+            <input type="text" id="ham" name="name">
+        </div>
       <button type="submit" class="btn btn-outline-secondary rounded-0">Submit</button>
-  </form>
+    </form>
+  </div>
+</div>
+
+</div>
 
         
